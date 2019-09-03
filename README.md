@@ -59,19 +59,19 @@ If costs allow, spin up another EMR cluster for interactive query, as all data a
 **Appendix – screenshots**
 
 **Ganglia UI for monitoring EMR cluster**
-![Alt text](raw/screen_1.PNG?raw=true)
+![Alt text](Raw/screen_1.PNG?raw=true)
 
 **Ranger with EMR Architecture**
-![Alt text](raw/screen_2.PNG?raw=true)
+![Alt text](Raw/screen_2.PNG?raw=true)
 
 **Ranger – Audit logging**
-![Alt text](raw/screen_3.PNG?raw=true)
+![Alt text](Raw/screen_3.PNG?raw=true)
 
 **Ranger – RBAC access control for Hive / HDFS**
-![Alt text](raw/screen_4.PNG?raw=true)
+![Alt text](Raw/screen_4.PNG?raw=true)
 
 **EMRFS**
-![Alt text](raw/screen_5.PNG?raw=true)
+![Alt text](Raw/screen_5.PNG?raw=true)
 
 **Kinesis with Spark Streaming in EMR**
 
