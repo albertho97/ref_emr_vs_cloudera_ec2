@@ -74,12 +74,13 @@ If costs allow, spin up another EMR cluster for interactive query, as all data a
 ![Alt text](Raw/screen_5.PNG?raw=true)
 
 **Kinesis with Spark Streaming in EMR**
-
+![Alt text](Raw/screen_6.PNG?raw=true)
 
 **EMR Encryption**
-
+![Alt text](Raw/screen_7.PNG?raw=true)
 
 **EMR Spot Instance**
-
+![Alt text](Raw/screen_8.PNG?raw=true)
 
 **EMR Auto scaling by metrics**
+![Alt text](Raw/screen_9.PNG?raw=true)
