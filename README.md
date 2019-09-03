@@ -6,8 +6,7 @@
 | --- | --- | --- |
 | License Cost Impact | No licenses cost, just EC2 + EMR rate costs | Enterprise licenses + EC2 costs |
 | Scalability | Can do auto scaling + spot instance | Due to license per node, not so easy to do auto scaling |
-| **Storage Impact
-Filesystem (HDFS) and S3** | S3 (EMRFS), Compute and Storage are loosely decoupled. S3 is the primary storage for the entire data lake. HDFS will become buffer storage. Much lower storage cost on S3 than EBS
+| Storage Impact Filesystem (HDFS) and S3 | S3 (EMRFS), Compute and Storage are loosely decoupled. S3 is the primary storage for the entire data lake. HDFS will become buffer storage. Much lower storage cost on S3 than EBS
 [Link](http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-file-systems.html) | HDFS is the primary storage, require EBS disk permanently provisioned. Compute and Storage cannot be decoupled |
 | **Controller of Cluster** | Ganglia UI, a web console for monitoring, and managing cluster will be through AWS EMR portal, UI functionality are much less than Cloudera Manager, some orchestration tasks require manual scripting | Cloudera Manager UI, very flexible controller to manage the entire cluster |
 | AWS Ecosystem integration | Better integrate with other AWS components, such as Kinesis, S3 (EMRFS) and IAM (Identity and Access Management) | Cloudera also has S3Connector, it can only using S3a:// protocol, instead of s3:// (EMRFS), which has different compatibility level, certain DDL cannot be done on s3a:// |
