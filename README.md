@@ -75,6 +75,7 @@ If costs allow, spin up another EMR cluster for interactive query, as all data a
 ![Alt text](Raw/screen_5.PNG?raw=true)
 
 **Informatica BDM on AWS**
+
 ![Alt text](Raw/screen_6.PNG?raw=true)
 
 **Kinesis with Spark Streaming in EMR**
