@@ -73,7 +73,7 @@ If costs allow, spin up another EMR cluster for interactive query, as all data a
 **EMRFS**
 
 
-Kinesis with Spark Streaming in EMR
+**Kinesis with Spark Streaming in EMR**
 
 
 **EMR Encryption**
