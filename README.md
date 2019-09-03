@@ -6,12 +6,10 @@
 | --- | --- | --- |
 | License Cost Impact | No licenses cost, just EC2 + EMR rate costs | Enterprise licenses + EC2 costs |
 | Scalability | Can do auto scaling + spot instance | Due to license per node, not so easy to do auto scaling |
-| Storage Impact Filesystem (HDFS) and S3 | S3 (EMRFS), Compute and Storage are loosely decoupled. S3 is the primary storage for the entire data lake. HDFS will become buffer storage. Much lower storage cost on S3 than EBS [Link](http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-file-systems.html) | HDFS is the primary storage, require EBS disk permanently provisioned. Compute and Storage cannot be decoupled |
-| **Controller of Cluster** | Ganglia UI, a web console for monitoring, and managing cluster will be through AWS EMR portal, UI functionality are much less than Cloudera Manager, some orchestration tasks require manual scripting | Cloudera Manager UI, very flexible controller to manage the entire cluster |
+| Storage Impact Filesystem (HDFS) and S3 | S3 (EMRFS), Compute and Storage are loosely decoupled. S3 is the primary storage for the entire data lake. HDFS will become buffer storage. Much lower storage cost on S3 than EBS. [Link](http://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-file-systems.html) | HDFS is the primary storage, require EBS disk permanently provisioned. Compute and Storage cannot be decoupled |
+| Controller of Cluster | Ganglia UI, a web console for monitoring, and managing cluster will be through AWS EMR portal, UI functionality are much less than Cloudera Manager, some orchestration tasks require manual scripting | Cloudera Manager UI, very flexible controller to manage the entire cluster |
 | AWS Ecosystem integration | Better integrate with other AWS components, such as Kinesis, S3 (EMRFS) and IAM (Identity and Access Management) | Cloudera also has S3Connector, it can only using S3a:// protocol, instead of s3:// (EMRFS), which has different compatibility level, certain DDL cannot be done on s3a:// |
-| Security | AWS IAM + Ranger + AWS KMS
-It covers security, it may not have as fine-grained control as cloudera navigator
-[Link](https://aws.amazon.com/blogs/big-data/implementing-authorization-and-auditing-using-apache-ranger-on-amazon-emr/) | Cloudera Navigator + Trustee KMS server + Sentry to protects the clusters, which has more fine-grain level of controls |
+| Security | AWS IAM + Ranger + AWS KMS. It covers security, it may not have as fine-grained control as cloudera navigator. [Link](https://aws.amazon.com/blogs/big-data/implementing-authorization-and-auditing-using-apache-ranger-on-amazon-emr/) | Cloudera Navigator + Trustee KMS server + Sentry to protects the clusters, which has more fine-grain level of controls |
 | Security – Ranger vs Sentry | Though it is from beginning of 2016, at least is done by a third party. Scroll to the bottom, and click on the image for the comparison table.
 [Link](https://blogs.informatica.com/2016/01/16/securing-sensitive-information-big-data-world/#fbid=lX_Bp0k88NQ) |   |
 | Audit | Ranger logs HDFS and Hive access + AWS Cloudtrail for any API call activity to the cluster.
